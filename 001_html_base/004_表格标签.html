@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 基本介绍 -->
+	<!-- 表格标签 table tr(table row) td(table defines),作用是给内容添加表格语义,以表格的形式来展现数据 -->
+	<!-- 默认情况下表格的边框为0,可以通过border属性来改变 -->
+	<!-- 表格标签和列表标签一样, 它是一个组合标签, 所以table/tr/td要组合出现 -->
+    <table>
+        <tr>
+            <td bgcolor="red">一行一列</td>
+            <td>一行二列</td>
+            <td bgcolor="lime">一行三列</td>
+        </tr>
+        <tr>
+            <td>二行一列</td>
+            <td bgcolor="pink">二行二列</td>
+            <td>二行三列</td>
+        </tr>
+    </table>
+    
+    <hr>
+    <!-- 属性 -->
+    <!-- 宽度(width)和高度(height) 设置对象:table td -->
+    <!-- 水平对齐(align）设置对象：table tr td -->
+    <!-- 垂直对齐(valign）设置对象：tr td -->
+    <!-- 外边距(cellspacing) 默认为2 设置对象: table -->
+    <!-- 内边距(cellpadding) 设置对象: table -->
+    <!-- 背景颜色bgcolor(background color) -->
+
+    <!-- 完整的表格结构 -->
+	<!-- 表头:caption,给整个表格设置标题,一定要嵌套在table标签内部才有效 -->
+	<!-- 标题:thead tr th,th标签会给每一列设置标题,内容会自动加粗，居中 -->
+	<!-- 主体:tbody tr td,tbody用来存放页面中的主体数据, 如果不写会自动加上 -->
+    <!-- 表尾:tfoot tr td,tfoot用来存放表格的页脚 -->
+    <table>
+        <caption>完整的表格结构</caption>
+        <thead>
+            <tr>
+                <th colspan="3">标题</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>主体数据</td>
+                <td>主体数据</td>
+                <td>主体数据</td>
+            </tr>
+            <tr>
+                <td>主体数据</td>
+                <td>主体数据</td>
+                <td>主体数据</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>页脚</td>
+                <td>页脚</td>
+                <td>页脚</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- 单元格合并 -->
+	<!-- 水平方向上的单元格合并：可以给td标签添加一个colspan属性, 来指定把某一个单元格当做多个单元格来看待 -->
+	<!-- 垂直方向上的单元格合并：可以给td标签设置一个rowspan属性, 来指定把某一个单元格当做多个单元格来看待 -->
+	<!-- 单元格合并只能向后或者是向下合并 -->
+</body>
+</html>

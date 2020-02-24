@@ -1,0 +1,56 @@
+.father{
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+
+    overflow: hidden;
+}
+.box1{
+
+    margin: 50px auto;
+
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+}
+/* 水平居中
+	方法一,设置父元素的padding值
+	方法二,设置子元素的margin值
+	方法三,需要居中的元素设置宽度和左右边距为auto,常见设置为:margin:0 auto
+	注意,方法一和方法二,如果父元素宽度发生变化需要重新计算,方法三是自动计算
+垂直居中
+	方法一,设置父元素的padding值
+	方法二,设置子元素的margin值
+    注意,垂直居中不可以通过auto的方法 */
+    
+.box2{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+
+    line-height: 100px;
+    text-align: center;
+}
+
+.box3{
+    margin: 0 auto;
+    padding: 20px;
+    width: 100px;
+    border: 1px solid #000;
+
+    text-align: center;
+}
+
+/* vertical-align
+	vertical-align是用来设置元素的垂直对齐方式的
+	注意,只有行内和行内块状元素设置vertical-align属性才有效,图片默认就是行内块状元素
+	取值
+		baseline(默认),基线对齐,使元素的基线同父元素的基线对齐
+		top,顶部对齐,使元素的顶部同父元素的顶部对齐
+		text-top,文本顶端对齐,使元素的顶部同父元素的文本的顶线对齐
+		bottom,底部对齐,使元素的底部同父元素的底部对齐
+		text-bottom,文本底端对齐,使元素的顶部同父元素的文本的底线对齐
+		middle,中间对齐,使元素在垂直方向的中线与文本行的中线对齐
+		数值：在baseline对齐基础上上下偏移对应的数值大小，可以是负值，（经常用以修复与文字不对其问题，负值向下，正值向上） */

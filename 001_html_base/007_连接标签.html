@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 链接标签
+	a标签(anchor)
+		作用:链接到另一个页面
+		a标签之间一定要有内容, 如果没有, 那么在页面上找不到这个标签,内容可以是文字也可以图片
+		属性
+			href(hypertext reference)属性,用来指定需要跳转的目标地址,href属性必须有
+				相对或绝对目标地址
+				假链接“#”或者“javascript:;”
+					点击之后不会跳转的链接
+					在项目开发前期, 其它页面都没有写出来, 那么我们就不知道应该跳转到什么地方, 所以就只能使用假链接来代替. 当项目后期其页面都已经完成时再将假链接替换为真链接
+					“#”,点击自动回到顶部
+					“javascript:;”,点击不会自动回到网页顶部，多数情况是给JS预留处理的
+				“#目标标签的id值”
+					作用是跳转到指定的位置
+					跳转到指定的位置是没有过度动画的
+					可以跳转到其他页面的指定位置,做法就是把href属性设置为'其他页面.html#其他页面中目标标签的id值'
+			target属性来指定打开的方式
+				_blank(新页面打开)
+				_self(当前页面打开),默认就是_self
+			title属性来指定鼠标移动到超链接上时显示的信息
+	base标签
+		为页面上的所有链接规定默认地址或默认打开的方式
+		base标签必须写在head标签中
+		base标签没有结束标签
+		如果既在base中指定了target又在a标签中指定了target,那么浏览器会按照a标签中指定的来执行
+		如果在base中指定了默认地址,a标签的地址和img标签的地址都会以base标签的地址为相对地址 -->
+</body>
+</html>

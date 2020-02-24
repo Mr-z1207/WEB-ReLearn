@@ -1,0 +1,30 @@
+p{
+    background-color: skyblue;
+    /* width: 600px; */
+    height: 100px;
+
+    color: red;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+span{
+    background-color: lemonchiffon;
+    margin-left: 20px;
+}
+/* 不是所有的属性都可以被继承,
+只有color和以/font-/text-/line-开头的属性才可以继承 */
+
+
+.stacking_1{
+    color: red;
+}
+.stacking_2{
+    color: blue;
+}
+.stacking_3{
+    color: green;
+}
+/* 当多个选择器选中同一个元素,并且设置了相同的属性时,
+CSS解决这种冲突的能力就叫做CSS的层叠性,
+后面的会覆盖前面的 */

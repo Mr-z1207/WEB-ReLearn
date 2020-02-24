@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/009_布局_浮动流.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nofloat">nofloat</div>
+    <div class="float_1">float_1</div>
+    <div class="float_2">float_2</div>
+    <div class="float_3">float_3<!-- 文字会被挤下来 --></div>
+    <div class="nofloat">nofloat</div>
+
+    <div class="father">
+        <div class="float_left float_4">float_4</div>
+        <div class="float_left float_5">float_5</div>
+        <div class="float_left float_6">float_6 贴靠现象</div>
+        <div class="float_left float_7">float_7 贴靠现象</div>
+        <p>围绕现象: 浮动的元素不能盖住没有浮动元素的文字</p>
+    </div>
+</body>
+</html>

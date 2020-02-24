@@ -1,0 +1,64 @@
+div{
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+    padding: 10px;
+    border: 5px dashed #000;
+}
+
+.box1{
+    background-color: #ff55ff;
+    /* 颜色可以是英文单词,rgb,rgba,十六进制,transparent */
+}
+.box2{
+    background-image: url(./../../img/5.png);
+    /* 图片默认是在水平和垂直方向上平铺的 */
+}
+.box3{
+    background-image: url(./../../img/5.png);
+    background-repeat: no-repeat;
+    /* 
+    repeat-x（只在水平方向上平铺）|
+    repeat-y（只在垂直方向上平铺）|
+    no-repeat 水平和垂直方向上都不平铺 
+    */
+}
+.box4{
+    background-image: url(./../../img/5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* scroll(背景图片会随着滚动条的滚动而滚动)
+    fixed(不随滚动条的滚动而滚动) */
+}
+.box5{
+    background-image: url(./../../img/5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* top center bottom 数值px */
+}
+.box6{
+    background-image: url(./../../img/5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* auto(谁设置为auto把谁等比拉伸) */
+    /* cover,图片等比拉伸到宽度和高度都填满元素 */
+    /* contain,图片等比拉伸到宽度或高度都填满元素 */
+}
+.box7{
+    background-image: url(./../../img/5.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    /* padding-box(默认,从内边距开始显示) */
+    /* border-box(从边框开始显示) */
+    /* content-box(从内容区域开始显示) */
+}
+.box8{
+    background-color: pink;
+    background-clip: content-box;
+    /* padding-box(默认,从内边距开始显示) */
+    /* border-box(从边框开始显示) */
+    /* content-box(从内容区域开始显示) */
+}
+
+/* background:背景颜色 背景图片 平铺设置 背景图片固定 图片定位 */

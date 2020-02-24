@@ -1,0 +1,52 @@
+.T-decoration{
+    text-decoration: line-through;
+    /* underline 对元素加下划线 */
+    /* overline 顶端画一个上划线 */
+    /* line-through 文本中间画一个贯穿线 */
+    /* none 取消装饰，常见的用途就是用于去掉超链接的下划线 */
+}
+.T-align{
+    background-color: skyblue;
+    width: 150px;
+    text-align: right;
+    /* left(默认) 左对齐 */
+    /* center 居中对齐 */
+    /* right 右对齐 */
+}
+.T-indent{
+    background-color: palegreen;
+    width: 150px;
+    text-indent: 2em;
+    /* 这个单位可以是px(像素), */
+    /* 也可以是em(一个文字的宽度),用的最多的还是em */
+}
+.T-shadow{
+    text-shadow: 5px 5px 3px gray;
+    /* 取值为:水平偏移距离 垂直偏移距离 模糊距离 阴影颜色; */
+}
+
+
+
+/* 空白符处理white-space
+	
+	normal(默认值)
+	空白符合并的意思是丢掉多余的空白符。换行字符（回车）会转换为空格，一行中多个空格的序列也会转换为一个空格。
+	换行符保留的意思是文字中的换行符是否在浏览器中生效
+	自动换行的意思是当文字长度超出容器宽度时是否会在空白处换行,如果允许换行则容器会变高
+文本溢出处理text-overflow
+	文本溢出是指文字长度超出容器宽度
+	clip(剪贴)
+	ellipsis(显示省略号...)
+	该属性一般需要配合其他属性一起使用,例如
+p{
+  width: 100px;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: clip;  
+}
+长单词换行word-wrap
+	normal(默认值) 一个单词的长度超出容器宽度时不换行
+	break-word 一个单词的长度超出容器宽度时换行;
+单词换行方法word-break
+	normal(默认值) 使用浏览器默认的换行规则,及内容长度超出容器宽度时在单词尾部出换行
+	break-all 内容长度超出容器宽度时在单词内部换行 */

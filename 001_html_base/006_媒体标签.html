@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 图像标签img(image)
+	作用:告诉浏览器显示一张图片
+	img标签不会独占一行
+	src(source)属性用来指定图片的地址
+	width/height属性
+		可以手动指定img标签的宽度(width)属性和高度(height)属性,但图片有可能会变形
+		想指定宽度和高度,又不想让图片变形,可以只指定宽度和高度其中的一个值,系统会自动计算出另外一个的值, 并且都是等比拉伸的
+		如果img标签没有指定宽高, 那么系统会按照图片默认的宽高来显示
+	title属性是当鼠标悬停在图片上时, 显示的提示内容
+    alt(alternate)属性是用于告诉浏览器当图片找不到时显示什么内容 -->
+    <!-- <img src="" alt=""> -->
+
+    <!-- 视频标签video
+	作用:播放视频
+    格式1
+        <video src="">
+        </video>
+    格式2
+        <video>
+            <source src="" type=""></source>
+            <source src="" type=""></source>
+        </video>
+		格式2是为了解决浏览器适配问题,因为没有一种视频格式是所有浏览器都支持的
+		video支持三种视频格式, 我们可以把这三种格式都通过source标签指定给video标签, 那么以后当浏览器播放视频时它就会从这三种中选择一种自己支持的格式来播放
+		source标签的type属性来指定视频格式,取值有:video/webm,video/mp4,video/ogg
+		source标签的src属性来指定视频某一个视频的地址
+	不管是格式1还是格式2都需要浏览器支持HTML5,如果不支持,需要引入相应的框架,如:https://html5media.info/
+	视频格式和浏览器支持情况
+		
+		Ogg = 带有 Theora 视频编码和 Vorbis 音频编码的 Ogg 文件
+		MPEG4 = 带有 H.264 视频编码和 AAC 音频编码的 MPEG 4 文件
+		WebM = 带有 VP8 视频编码和 Vorbis 音频编码的 WebM 文件
+	属性
+		src: 需要播放的视频地址
+		autoplay: 是否需要自动播放视频
+		controls: 是否需要显示控制条
+		poster: 视频没有播放之前显示的占位图片
+		loop: 视频播放完毕之后是否需要循环播放,一般用于做广告视频
+		preload: 预加载视频, 但是需要注意preload和autoplay相冲, 如果设置了autoplay属性, 那么preload属性就会失效
+		muted:静音
+        width/height: 和img标签中的一模一样 -->
+        
+    
+    <!-- 音频标签audio
+        作用: 播放音频
+        格式1:
+            <audio src="">
+            </audio>
+        格式2:
+            <audio>
+                <source src="" type="">
+                <source src="" type="">
+            </audio>
+            source标签的type属性来指定视频格式,取值有:audio/ogg,audio/mpeg
+        音频格式的浏览器支持情况
+            
+        audio标签的使用和video标签的使用基本一样,video中能够使用的属性在audio标签中大部分都能够使用, 
+        并且功能都一样,只不过有3个属性不能用, height/width/poster -->
+</body>
+</html>

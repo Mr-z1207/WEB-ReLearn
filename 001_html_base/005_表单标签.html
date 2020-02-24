@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表单的作用是收集用户信息 -->
+    <!-- form标签 -->
+    <!-- 所有的表单内容，都要写在form标签里面 -->
+    <form action="http://www.kuazhu.com" method="get">
+        <!-- 表单的action属性用来指定提交地址 -->
+        <!-- 表单的method属性用来指定提交方法 -->
+
+        <!-- input标签 -->
+        <!-- <input type="text"> -->
+        <!-- type属性 -->
+        <!-- type属性有很多类型的取值, 取值的不同就决定了input标签的功能和外观不同 -->
+
+
+        <!-- type="text":明文输入框,value属性用来指定默认值,value属性的值是传给服务器的值 -->
+        <input type="text">
+
+        <!-- type="password":暗文输入框,value属性用来指定默认值,value属性的值是传给服务器的值 -->
+        <input type="password">
+
+        <!-- type="radio":单选框 -->
+            <!-- 单选按钮，天生是不互斥的，如果想互斥，必须要有相同的name属性 -->
+            <!-- 可以给input标签添加一个checked属性,值也是checked,让单选框默认选中某一个 -->
+            <!-- 如果属性的取值和属性的名称一样, 可以只写属性名称 -->
+            <!-- value属性的值是传给服务器的值 -->
+        <input type="radio" name="radio" checked>
+        <input type="radio" name="radio">
+        <input type="radio" name="radio">
+
+        <!-- type='checkbox':多选框 -->
+            <!-- 多选框可以一次选择多个值 -->
+            <!-- 在同一个表单中用相同的name属性可以把多选框的值合并发给服务器 -->
+            <!-- 默认值的设置和单选框一样 -->
+            <!-- value属性的值是传给服务器的值 -->
+        <input type="checkbox" name="checkbox" checked>
+        <input type="checkbox" name="checkbox">
+        <input type="checkbox" name="checkbox">
+
+        <!-- type="button":普通按钮,value属性用来指定按钮的内容,配合JS完成一些操作 -->
+        <input type="button" value="button">
+
+        <!-- type="image":定义图片按钮,src属性用来指定图片的位置,配合JS完成一些操作 -->
+        <!-- type="reset":清空表单的数据,value属性用来指定按钮的内容 -->
+        <!-- type="submit":提交表单的数据到服务器 -->
+        <!-- type="hidden":隐藏的数据,配合提交按钮将一些数据偷偷的提交到服务器 -->
+        <!-- type="file":上传文件 -->
+        <!-- type="number":只能输入数字 -->
+
+        <!-- type="date":通过日历来选择时间 -->
+        <!-- type="color":通过取色板来选择颜色 -->
+        <!-- type="email":自动校验邮箱的合法性 -->
+
+        <!-- placeholder属性,给input设置输入字段的提示 -->
+        <!-- autocomplete属性,取值有on和off,设置是否使用输入字段的自动完成功能 -->
+
+        <!-- label标签 -->
+        <!-- 作用:把文字和输入框进行绑定,点击文字时让对应的输入框得到焦点  -->
+        <!-- 绑定步骤 -->
+            <!-- 将文字用label标签包裹起来 -->
+            <!-- 给输入框添加一个id属性 -->
+            <!-- 在label标签中把for属性的值设置成输入框中的id的值就可以进行绑定了 -->
+        <input type="radio" name="radio" id="lab_test"><label for="lab_test">lab_test</label>
+
+        <!-- select标签 -->
+        <!--作用:定义下拉列表
+            格式:
+                <select name="city">
+                    <optgroup label="分组名称">
+                        <option value='1'>列表数据1</option>
+                        <option value='2' selected>列表数据2</option>
+                    </optgroup>
+                </select>
+            下拉列表的内容只能选择不能输入
+            可以给option标签添加一个selected属性来指定列表的默认值
+            可以用optgroup标签把option标签包裹起来就行分组,给optgroup添加label属性来指定分组的名称
+            select中的name属性,指定向服务器传输数据时的名字
+            option中的value属性的值是传给服务器的值 -->
+
+        <!-- textarea标签 -->
+        <!--作用:定义一个多行输入框
+            默认情况下输入框可以无限换行
+            默认情况下输入框有自己的宽度和高度
+            可以通过cols和rows来指定输入框的宽度和高度, 但是虽然指定了列数和行数, 但是还是可以无限往下输入
+            默认情况下输入框是可以手动拉伸的,如果要禁止手动拉伸,需要设置css为: resize: none; -->
+    </form>
+</body>
+</html>

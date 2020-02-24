@@ -1,0 +1,90 @@
+/*
+盒模型组成：
+    外边距
+    内边距
+    边框
+    内容
+ ______________
+|  __________  |
+| |          | |
+| |          | |
+| |          | |
+| |__________| |
+|______________|
+*/
+.father{
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+    padding: 20px;
+    /* 内边距是有背景色的,他的背景色和内容的背景色一样 */
+    border: 1px solid #000;
+    /* 常见样式有dotted(点状),dashed(虚线),solid(实线) */
+}
+
+.son{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 1px dashed #000;
+}
+/* 宽高的限制
+	min-width,宽度最小限制,
+	max-width,宽度最高限制,
+	min-height,高度最低限制,
+    max-height,高度最高限制, */
+    
+/* margin重叠
+阻止普通兄弟元素垂直方向上外边距重叠方法是让兄弟元素在不同的BFC中(用overflow:hidden触发)
+
+阻止普通的父子元素上外边距重叠的方法
+	给父元素添加上边框
+	给父元素添加上内边距
+    触发父元素的BFC */
+    
+
+.base-box{
+    margin: 20px auto;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    border: 20px solid #000;
+    background-color: skyblue;
+    box-sizing: content-box;
+}
+
+.ie-box{
+    margin: 20px auto;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    border: 20px solid #000;
+    background-color: skyblue;
+    box-sizing: border-box;
+}
+
+/* 
+标准和模型，实际宽度160px
+
+实际宽度 = 左右 padding + 左右 border + width
+内容宽度 = width
+
+ie盒模型，实际宽度100px
+
+实际宽度 = width
+内容宽度 = width - 左右 padding - 左右 border 
+*/
+
+.other-attr{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: pink;
+    text-align: center;
+    line-height: 100px;
+
+    box-shadow: 2px 2px 3px 2px grey;
+    /* 设置:box-shadow: 水平距离 垂直距离 模糊距离 阴影大小 阴影颜色 内外阴影(inset); */
+    border-top-left-radius: 50% 100px;
+}

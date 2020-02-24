@@ -1,0 +1,52 @@
+div{
+    width: 150px;
+    height: 100px;
+    border: 1px solid #000;
+}
+
+.nofloat{
+    margin: 0 auto;
+    background-color: pink;
+}
+.float_1{
+    float: left;
+    /* float:left|right|none(默认) */
+    background-color: skyblue;
+}
+.float_2{
+    float: right;
+    background-color: tomato;
+}
+.float_3{
+    float: none;
+    width: 200px;
+    height: 150px;
+    background-color: darkseagreen;
+}
+
+/* float的取值只有左(left)对齐和右(right)对齐，没有中间对齐 */
+/* 父元素的margin/border/padding的值对浮动定位的子元素的位置没有影响,浮动定位的子元素是从父元素的内容区域开始参考的 */
+/* 浮动流主要是用来水平排版的 */
+
+/* 浮动元素脱标后在浮动流中的排列规则
+	同方向上,先浮动的显示在前面,后浮动的显示在后面,注意这个先后指的是结构上的先后而不是css的书写先后
+	不同方向上,左浮动找左浮动元素，右浮动找右浮动元素
+	浮动后元素的位置由浮动前元素在标准流中的位置决定,这个位置主要指的是浮动前在标准流中是第几行,浮动后还是显示在第几行
+    由于浮动元素的位置和浮动前在标准流的位置有关,所以严格意识上说浮动元素是非完全脱标 */
+    
+.father{
+    margin: 20px auto;
+    width: 400px;
+    /* 浮动的元素是撑不起来父级块状元素的高度的 */
+    /* height: 400px; */
+}
+/* 当父元素的宽度不足以撑起所有浮动的子元素的时候，会发生贴靠 */
+.float_left{
+    float: left;
+}
+.float_6{
+    width: 250px;
+}
+.float_7{
+    width: 200px;
+}
