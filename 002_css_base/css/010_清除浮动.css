@@ -1,0 +1,56 @@
+.father{
+    width: 400px;
+    margin: 10px auto;
+    border: 1px solid #000;
+}
+
+.son{
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ff55ff;
+}
+
+/* 方式一,给父元素添加高度 */
+/* 但是项目中一般高度是有内容撑起来的,尽量不设置高度 */
+.father_1{
+    height: 120px;
+}
+
+/* 方式二,通过给第二个盒子添加clear属性来清除前面元素浮动带来的影响 */
+/* clear属性的意思是不让自己的子元素找前面浮动的元素 */
+.father_3{
+    clear: both;
+}
+/* 通过clear属性清除浮动会导致
+第一个盒子的margin-bottom  和
+第二个盒子的margin-top失效,
+第二个盒子的margin-top失效是因为margin的值传递 */
+
+/* 方式三,外墙法,给第一个盒子和第二个盒子之间添加一个空盒子,
+并且给这个空盒子设置clear:both属性 */
+.clear_out{
+    clear: both;
+}
+/* 方式四,内墙法,给第一个盒子所有元素的后面添加一个空盒子,
+并且给这个空盒子设置clear:both属性 */
+.clear_in{
+    clear: both;
+}
+/* 方法五,通过伪元素选择器(:after)实现内墙法 */
+.father_5:after{
+    content: '';
+    clear: both;
+    display: block;
+    height: 0px;
+    visibility: hidden;
+}
+.father_5{
+    zoom:1;
+}
+
+/* 方式六,通过给第一个盒子添加overflow: hidden来清除浮动,
+其原理是触发第一个盒子的BFC */
+.father_6{
+    overflow: hidden;
+}

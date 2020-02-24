@@ -105,3 +105,21 @@ BFC(Block Fromatting Context)块级格式上下文,BFC是一个独立的布局�
 - `block` 块级
 - `inline` 行内
 - `inline-block` 行内块级
+
+## 清除浮动
+
+> 详细见 ./002_css_base/010_清除浮动.html
+
+```css
+.clearfix:after{
+    content: '';
+    clear: both;
+    display: block;
+    height: 0px;
+    visibility: hidden;
+}
+/* IE8以上才支持after IE6、IE7用zoom:1 */
+.clearfix{
+    zoom:1;
+}
+```
