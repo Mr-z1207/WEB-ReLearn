@@ -1,0 +1,69 @@
+.father{
+    margin: 40px auto;
+    width: 500px;
+    border: 1px solid #000;
+    background-color: tomato;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+}
+
+/* 相对定位 */
+/* 不会脱离标准流，所以父元素不会高度塌陷 */
+.box1{
+    background-color: skyblue;
+
+    position: relative;
+    /* 只写position: relative;元素是不会发生任何移动的,
+    需要配合设置四条边的移动距离来一起使用 */
+    top: 20px;
+    left: 50px;
+}
+
+/* 绝对定位 */
+/* 脱离标准流 */
+.box2{
+    background-color: yellow;
+
+    position: absolute;
+    /* 只写position: absolute;元素是不会发生任何移动的,
+    需要配合设置四条边的移动距离来一起使用 */
+    top: 20px;
+    left: 50px;
+}
+
+/* 绝对定位元素会参考离他最近的具有定位属性的祖先元素,
+如果祖先中没有定位元素就参考body元素,
+换句话说如果一个元素设置为绝对定位,首先去找他的父元素,
+看他的父元素有没有position属性,如果没有就找他的父亲的父亲,
+直到找到第一个具有position属性的祖先,然后相对于该祖先发生位置移动,
+如果所有祖先都没有position属性,就相对于body发生位置的移动 */
+
+/* 绝对定位的元素水平居中
+left:50%
+margin-left: -元素宽度的一半 */
+
+/* 固定定位 */
+/* 脱离标准流 */
+.box3{
+    background-color: greenyellow;
+
+    position: fixed;
+    /* 只写position: fixed;元素是不会发生任何移动的,
+    需要配合设置四条边的移动距离来一起使用 */
+    top: 20px;
+    left: 100%;
+    margin-left: -170px;
+}
+
+/* 参照body发生位置的移动,固定定位的元素不会随着滚动条的移动而移动 */
+
+/* 静态定位 */
+.box4{
+    position: static;
+    /* 静态定位就是没有定位,元素出现在标准流中 */
+    background-color: slategray;
+}
