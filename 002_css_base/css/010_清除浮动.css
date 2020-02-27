@@ -38,7 +38,7 @@
     clear: both;
 }
 /* 方法五,通过伪元素选择器(:after)实现内墙法 */
-.father_5:after{
+.father_5::after{
     content: '';
     clear: both;
     display: block;

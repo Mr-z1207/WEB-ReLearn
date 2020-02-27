@@ -1,0 +1,108 @@
+@keyframes width_long{
+    from{
+        width:100px;
+    }
+    to{
+        width:200px;
+    }
+}
+
+div{
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+}
+/* 创建动画的步骤 */
+/* 给需要执行动画的元素指定动画的名称,animation-name */
+/* 创建指定名称的动画,@keyframes */
+/* 给需要执行动画的元素指定动画的执行时间,animation-duration */
+.box_1{
+    animation-name: width_long;
+    animation-duration: 1s;
+}
+
+/* 动画的其他属性 */
+.box_2{
+    animation-name: width_long;
+    animation-duration: 1s;
+    /* 动画的执行速度,动画执行的速度和过渡的一样 */
+    animation-timing-function: ease-out;
+    /* ease 默认的 */
+    /* ease-in */
+    /* ease-out */
+    /* ease-in-out */
+    /* cubic-bezier(x1,y1,x2,y2); */
+}
+
+.box_3{
+    animation-name: width_long;
+    animation-duration: 1s;
+    /* 延迟动画的执行,时间可以是秒或者毫秒 */
+    animation-delay: 3s;
+}
+
+.box_4{
+    animation-name: width_long;
+    animation-duration: 1s;
+    /* 具体的数字(默认是1)|infinite(无限循环); 执行次数  */
+    animation-iteration-count: 3;
+}
+
+.box_5{
+    animation-name: width_long;
+    animation-duration: 1s;
+    /* 是否执行往返动画 */
+    animation-direction:alternate;
+    /* normal(默认状态不执行往返动画)|alternate(执行往返动画) */
+    /* 如果是执行往返动画,返回执行也算一次动画 */
+    /* 所以至少需要两次循环 */
+    animation-iteration-count: 3;
+}
+
+.box_6{
+    animation-name: width_long;
+    animation-duration: 1s;
+    /* 是否执行动画 */
+    animation-play-state: paused;
+}
+.box_6:hover{
+    animation-play-state: running;
+}
+
+.box_7{
+    animation-name: width_long;
+    animation-duration: 1s;
+    /* 规定动画等待时和结束时的显示状态 */
+    animation-fill-mode: both;
+    /* none(不做改变) */
+    /* backwards(动画等待时显示动画的第一帧) */
+    /* forwards(动画执行结束保持显示动画的最后一帧) */
+    /* both(动画执行前显示动画的第一帧并且动画执行结束显示动画的最后一帧) */
+}
+
+.box_8{
+    /* 动画的名称 动画的执行时间 动画的速度 延迟时间 动画的执行次数 是否执行往返动画; */
+    animation: width_long 1s 5s 3;
+}
+
+.box_9{
+    animation: color_change 5s infinite;
+}
+@keyframes color_change{
+    0%{
+        background-color: red;
+    }
+    25%{
+        background-color: orange;
+    }
+    50%{
+        background-color: yellow;
+    }
+    75%{
+        background-color: greenyellow;
+    }
+    100%{
+        background-color: green;
+    }
+}

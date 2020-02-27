@@ -1,0 +1,44 @@
+div{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* 给需要实现3D效果的元素的"""父"""元素添加
+transform-style: preserve-3d;属性 */
+body{
+    transform-style: preserve-3d;
+    transform: rotateY(45deg);
+    perspective: 800px;
+}
+
+.box_1{
+    transform: translateZ(75px);
+    background-color: #df2020;
+}
+.box_2{
+    transform: rotateY(90deg) translateZ(75px);
+    background-color: #239b33;
+}
+.box_3{
+    transform: rotateX(90deg) translateZ(75px);
+    background-color: #2846ca;
+}
+.box_4{
+    transform: rotateX(90deg) translateZ(-75px);
+    background-color: #1ad6ad;
+}
+.box_5{
+    transform: rotateY(90deg) translateZ(-75px);
+    background-color: #f0e009;
+}
+.box_6{
+    transform: translateZ(-75px);
+    background-color: #e313eb;
+}

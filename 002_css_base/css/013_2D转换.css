@@ -1,0 +1,35 @@
+/* 使元素在平面上改变形状、尺寸和位置的一种效果 */
+div{
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 200px;
+    background-color: steelblue;
+}
+
+.box_1{ /* 旋转 */
+    transform: rotate(45deg);
+    /* n是一个具体的数字,deg代表度数的单位 */
+}
+.box_2{ /* 平移 */
+    transform: translate(-300px, 80px)
+    /* (水平方向移动距离,垂直方向移动距离) */
+}
+.box_3{ /* 平移 */
+    transform: scale(1.5, 0.8);
+    /* (水平方向缩放比例,垂直方向缩放比例) */
+    /* 缩放比例如果是1代表不变,大于1代表放大,小于1代表缩小 */
+}
+.box_4{ /* 复合样式 */
+    transform: rotate(45deg) translate(200px,200px) scale(0.5)
+    /* 多个转换之间用空格隔开 */
+    /* 旋转会修改坐标系,因此旋转后再平移(即旋转写在平移前面)是在旋转修改后的坐标系下平移 */
+}
+
+/* 修改旋转基点 */
+/* 格式: transform-origin: 水平方向移动距离 垂直方向移动距离; */
+
+/* 修改旋转轴向 */
+/* rotate改成rotateX rotateY rotateZ(默认相当于rotate) */
+/* 为了让元素呈现近大远小效果,需要给元素的父元素上面添加透视距离属性perspective */

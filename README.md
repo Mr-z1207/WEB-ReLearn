@@ -111,7 +111,7 @@ BFC(Block Fromatting Context)块级格式上下文,BFC是一个独立的布局�
 > 详细见 ./002_css_base/010_清除浮动.html
 
 ```css
-.clearfix:after{
+.clearfix::after{
     content: '';
     clear: both;
     display: block;
@@ -123,3 +123,18 @@ BFC(Block Fromatting Context)块级格式上下文,BFC是一个独立的布局�
     zoom:1;
 }
 ```
+
+## CSS3兼容前缀
+
+- `-webkit-`　chrome、safari
+- `-moz-`　firefox
+- `-ms-`   IE
+- `-o-`   opera
+
+## 杂记
+
+css3为了区分伪类和伪元素，伪元素采用双冒号写法。
+
+- 常见伪类: `:hover` `:link` `:active` `:target` `:not()` `:focus`
+
+- 常见伪元素 `::first-letter` `::first-line` `::before` `::after` `::selection`

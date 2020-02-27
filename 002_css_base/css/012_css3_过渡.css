@@ -1,0 +1,97 @@
+div{
+    margin: 20px auto;
+    width: 200px;
+    height: 50px;
+    background-color: #bfecc5;
+    line-height: 50px;
+    text-align: center;
+}
+.box_1::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0px;
+    background-color: #00ff22;
+    margin-top: -4px;
+    margin-left: 50%;
+
+    /* 给需要过渡的元素添加transition-property属性来指定那个属性需要过渡,
+    如果有多个属性同时变化,将多个属性用逗号隔开即可,也可以用 all  */
+    transition-property: width, margin-left;
+
+    /* 给需要过渡的元素添加transition-duration属性来指定过渡的执行时间,时间可以是秒(s)或者毫秒(ms),
+    如果有多个属性同时变化,将过渡的执行时间用逗号隔开即可 */
+    transition-duration: 1s;
+}
+
+/* 给需要过渡的元素添加一个触发事件(通常是hover),
+在事件中指定需要过渡的属性的变化值 */
+
+.box_1:hover::after{
+    margin-left: 0px;
+    width: 100%;
+}
+
+
+/* 过渡的其他属性 */
+.box_2::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0px;
+    background-color: #00ff22;
+    margin-top: -4px;
+    margin-left: 50%;
+
+    transition-property: width, margin-left;
+    transition-duration: 1s;
+    /* 延迟过渡的执行,时间可以是秒或者毫秒 */
+    transition-delay: 1s;
+}
+.box_2:hover::after{
+    margin-left: 0px;
+    width: 100%;
+}
+
+.box_3::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0px;
+    background-color: #00ff22;
+    margin-top: -4px;
+    margin-left: 50%;
+
+    transition-property: width, margin-left;
+    transition-duration: 1s;
+    /* 过渡的执行速度 */
+    transition-timing-function: linear;
+    /* linear */
+    /* ease 默认的 */
+    /* ease-in */
+    /* ease-out */
+    /* ease-in-out */
+    /* cubic-bezier(x1,y1,x2,y2) */
+}
+.box_3:hover::after{
+    margin-left: 0px;
+    width: 100%;
+}
+
+/* 过渡复合样式的写法 */
+.box_4::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0px;
+    background-color: #00ff22;
+    margin-top: -4px;
+    margin-left: 50%;
+    
+    transition: width 1s, margin-left 1s;
+    /* 需要过渡的属性 执行过渡的时间 执行过渡的速度 延迟时间; */
+}
+.box_4:hover::after{
+    margin-left: 0px;
+    width: 100%;
+}
